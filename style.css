@@ -6,9 +6,10 @@ body {
   line-height: 32px;
   color: #222222;
   background-color: #f2f4f6;
-  background-image: url("img/hero-bg.jpg");
-  background-repeat: no-repeat;
+  background-image: url("img/soyboy-wojak.png");
   background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
 }
 
 .container {
