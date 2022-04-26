@@ -111,6 +111,10 @@ body {
   background-position: left;
 }
 
+.skill-go {
+  background-image: url("img/go-logo.svg");
+}
+
 .skill-html {
   background-image: url("img/icon-html.svg");
 }
