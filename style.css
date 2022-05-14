@@ -9,7 +9,13 @@ body {
   background-image: url("img/soyboy-wojak.png");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% 30%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
 }
 
 .container {
@@ -109,6 +115,26 @@ body {
   padding-left: 32px;
   background-repeat: no-repeat;
   background-position: left;
+}
+
+.skill-php {
+  background-image: url("img/php-logo.svg");
+  background-size:70px;
+}
+
+.skill-cplus {
+  background-image: url("img/C++_Logo.svg");
+  background-size:30px;
+}
+
+.skill-csharp {
+  background-image: url("img/csharp.svg");
+  background-size:30px;
+}
+
+.skill-psql {
+  background-image: url("img/Postgresql_elephant.svg");
+  background-size:30px;
 }
 
 .skill-go {
