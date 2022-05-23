@@ -18,7 +18,7 @@ img {
 }
 
 .container {
-  max-width: 928px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -30,7 +30,7 @@ img {
 
 .page-header .container,
 .page-footer .container {
-  max-width: 1408px;
+  max-width: 900px;
   text-align: right;
 }
 
@@ -57,22 +57,22 @@ img {
 }
 
 .hero-image .container {
-  max-width: 1408px;
+  max-width: 900px;
   text-align: center;
 }
 
 .heading {
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
-  font-size: 88px;
+  font-size: 40px;
   line-height: 96px;
   font-weight: 400;
 }
 
 .hero-image p {
   margin: 0;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .intro {
@@ -80,16 +80,16 @@ img {
 }
 
 .subheading {
-  margin: 0 0 56px;
+  margin: 0 0 30px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
-  font-size: 64px;
+  font-size: 30px;
   line-height: 80px;
   font-weight: 400;
   text-align: center;
 }
 
 .user-image {
-  margin: 0 0 32px;
+  margin: 0 0 30px;
   text-align: center;
 }
 
@@ -102,7 +102,7 @@ img {
 }
 
 .intro p {
-  margin: 0 0 32px;
+  margin: 0 0 30px;
 }
 
 .skills-list {
@@ -111,14 +111,14 @@ img {
 }
 
 .skills-list dt {
-  padding-left: 32px;
+  padding-left: 80px;
   background-repeat: no-repeat;
   background-position: left;
 }
 
 .skill-php {
   background-image: url("img/php-logo.svg");
-  background-size:70px;
+  background-size:contain;
 }
 
 .skill-cplus {
@@ -138,6 +138,7 @@ img {
 
 .skill-go {
   background-image: url("img/go-logo.svg");
+  background-size:60px;
 }
 
 .skill-html {
@@ -200,7 +201,7 @@ img {
 }
 
 .page-footer {
-  padding: 40px 0;
+  padding: 20px 0;
   background-color: #00417d;
   color: #ffffff;
 }
