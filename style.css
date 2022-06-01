@@ -128,13 +128,13 @@ h3 {
   margin: 0 0 30px;
 }
 
-.skills-list dt {
+.dt {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
 
-.skills-list dd {
+.dd {
   margin: 4px 0 16px;
   padding: 0;
   height: 14px;
@@ -144,13 +144,13 @@ h3 {
   border-radius: 8px;
 }
 
-.skills-list dd > div {
+.skill-list dd > div {
   height: 12px;
   background-color: #288be6;
   border-radius: 6px;
 }
 
-.skills-list dt img {
+.skill-list dt img {
   width: auto;
   height: 24px;
   margin-right: 8px;
