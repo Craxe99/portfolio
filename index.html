@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>тыц тыц тыц тыц тыц</title>
+    <script defer src="./script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -43,47 +44,15 @@
 
     <section class="skills">
         <h2>Мои навыки</h2>
-        <dl class="skills-list">
-            <dt>
-                <img src="./img/go-logo.svg"/>
-                Golang
-            </dt>
-            <dd>
-                <div style="width: 90%;">90%</div>
-            </dd>
-
-            <dt>
-                <img src="./img/php-logo.svg"/>
-                PHP - The worst
-            </dt>
-            <dd>
-                <div style="width: 70%;">70%</div>
-            </dd>
-
-            <dt>
-                <img src="./img/C++_Logo.svg"/>
-                C++
-            </dt>
-            <dd>
-                <div style="width: 70%;">70%</div>
-            </dd>
-
-            <dt>
-                <img src="./img/csharp.svg"/>
-                C#
-            </dt>
-            <dd>
-                <div style="width: 50%;">50%</div>
-            </dd>
-
-            <dt>
-                <img src="./img/Postgresql_elephant.svg"/>
-                PSQL
-            </dt>
-            <dd>
-                <div style="width: 90%;">90%</div>
-            </dd>
-        </dl>
+        <dl id="skill-list" class="skill-list"></dl>
+        <div id="sortButtons" class="skill-list-buttons">
+            <button data-field="power">
+                Сортировать по уровню
+            </button>
+            <button data-field="name">
+                Сортировать по названию
+            </button>
+        </div>
     </section>
 
     <section class="portfolio">
@@ -110,5 +79,16 @@
         <a href=" https://www.instagram.com/craxe99">Запрещенная в РФ социальная сеть</a>
     </div>
 </footer>
+<script>
+    const sortSkillsEventHandler = (event) => {
+        const field = event.target.dataset.field;
+
+        skills.sort(field)
+    }
+
+    const buttons = document.getElementById('sortButtons');
+
+    buttons.addEventListener('click', sortSkillsEventHandler);
+</script>
 </body>
 </html>

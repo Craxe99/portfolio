@@ -128,13 +128,13 @@ h3 {
   margin: 0 0 30px;
 }
 
-.skills-list dt {
+.dt {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
 
-.skills-list dd {
+.dd {
   margin: 4px 0 16px;
   padding: 0;
   height: 14px;
@@ -144,16 +144,40 @@ h3 {
   border-radius: 8px;
 }
 
-.skills-list dd > div {
+.skill-list dd > div {
   height: 12px;
   background-color: #288be6;
   border-radius: 6px;
 }
 
-.skills-list dt img {
+.skill-list dt img {
   width: auto;
   height: 24px;
   margin-right: 8px;
+}
+
+.skill-list-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.skill-list-buttons > button {
+  background: #288be6;
+  border: 2px solid #288be6;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 12px;
+  transition: background 0.4s, transform 0.1s;
+  will-change: true;
+}
+
+.skill-list-buttons > button:hover {
+  background: transparent;
+  color: black;
+}
+
+.skill-list-buttons > button:active {
+  transform: scale(0.95);
 }
 
 .portfolio {
