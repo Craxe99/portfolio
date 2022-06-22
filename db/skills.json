@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Golang",
+    "power": 90,
+    "iconName": "go-logo"
+  },
+  {
+    "name": "PHP — The worst",
+    "power": 80,
+    "iconName": "php-logo"
+  },
+  {
+    "name": "C++",
+    "power": 50,
+    "iconName": "cpp-logo"
+  },
+  {
+    "name": "C#",
+    "power": 70,
+    "iconName": "csharp-logo"
+  },
+  {
+    "name": "PSQL",
+    "power": 60,
+    "iconName": "psql-logo"
+  }
+]

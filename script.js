@@ -1,35 +1,8 @@
 const skills = {
-    skillsData: [
-        {
-            name: 'Golang',
-            power: 90,
-            iconName: 'go-logo'
-        },
-        {
-            name: 'PHP — The worst',
-            power: 80,
-            iconName: 'php-logo'
-        },
-        {
-            name: 'C++',
-            power: 50,
-            iconName: 'cpp-logo'
-        },
-        {
-            name: 'C#',
-            power: 70,
-            iconName: 'csharp-logo'
-        },
-        {
-            name: 'PSQL',
-            power: 60,
-            iconName: 'psql-logo'
-        }
-    ],
     imgDirPath: './img',
     isSortedByDesc: true,
 
-    renderList: function() {
+    renderList: async function() {
         const skillList = document.getElementById('skill-list');
 
         if (!skillList) {
@@ -38,7 +11,10 @@ const skills = {
 
         skillList.innerHTML = '';
 
-        const { skillsData, imgDirPath } = this;
+        const { imgDirPath } = this;
+
+        const response = await fetch('db/skills.json');
+        const skillsData = await response.json();
 
         skillsData.forEach(({ name, power, iconName }) => {
             const img = document.createElement('img');
