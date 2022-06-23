@@ -102,5 +102,5 @@ const skills = {
     }
 };
 
-skills.init();
+await skills.init();
 skills.renderList();
