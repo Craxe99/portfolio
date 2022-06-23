@@ -6,6 +6,8 @@ const skills = {
     init: async function () {
         const response = await fetch('db/skills.json');
         this.skillsData = await response.json();
+
+        this.renderList();
     },
 
     renderList: function () {
@@ -102,5 +104,4 @@ const skills = {
     }
 };
 
-await skills.init();
-skills.renderList();
+skills.init();
