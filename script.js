@@ -1,8 +1,14 @@
 const skills = {
+    skillsData: [],
     imgDirPath: './img',
     isSortedByDesc: true,
 
-    renderList: async function() {
+    init: async function () {
+        const response = await fetch('db/skills.json');
+        this.skillsData = await response.json();
+    },
+
+    renderList: function () {
         const skillList = document.getElementById('skill-list');
 
         if (!skillList) {
@@ -11,12 +17,9 @@ const skills = {
 
         skillList.innerHTML = '';
 
-        const { imgDirPath } = this;
+        const {skillsData, imgDirPath} = this;
 
-        const response = await fetch('db/skills.json');
-        const skillsData = await response.json();
-
-        skillsData.forEach(({ name, power, iconName }) => {
+        skillsData.forEach(({name, power, iconName}) => {
             const img = document.createElement('img');
             img.src = `${imgDirPath}/${iconName}.svg`;
             img.alt = `${name} icon`;
@@ -41,7 +44,7 @@ const skills = {
         });
     },
 
-    sort: function(field) {
+    sort: function (field) {
         switch (field) {
             case 'power':
                 this.sortByPower();
@@ -54,7 +57,7 @@ const skills = {
         }
     },
 
-    sortByField: function(array = [], fieldName, shouldSortByDesc = false) {
+    sortByField: function (array = [], fieldName, shouldSortByDesc = false) {
         if (!fieldName) {
             return array;
         }
@@ -72,8 +75,8 @@ const skills = {
         });
     },
 
-    sortByPower: function() {
-        const { skillsData, isSortedByDesc, sortByField } = this;
+    sortByPower: function () {
+        const {skillsData, isSortedByDesc, sortByField} = this;
         const sortedItems = sortByField(
             skillsData,
             'power',
@@ -85,8 +88,8 @@ const skills = {
         this.renderList();
     },
 
-    sortByName: function() {
-        const { skillsData, isSortedByDesc, sortByField } = this;
+    sortByName: function () {
+        const {skillsData, isSortedByDesc, sortByField} = this;
         const sortedItems = sortByField(
             skillsData,
             'name',
@@ -99,4 +102,5 @@ const skills = {
     }
 };
 
+skills.init();
 skills.renderList();
